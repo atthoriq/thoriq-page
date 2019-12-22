@@ -9,6 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
+import icon from "../images/thoriq-icon.ico"
+
 function SEO({lang, title }) {
 
   return (
@@ -17,6 +19,9 @@ function SEO({lang, title }) {
         lang,
       }}
       title={title}
+      link={
+        [{rel: 'icon', type: 'image/ico', size: '64x64', href: `${icon}`}]
+      }
     />
   )
 }
